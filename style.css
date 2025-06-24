@@ -1,0 +1,289 @@
+/* フォントと全体のベース */
+body {
+  font-family: 'Helvetica Neue', 'Yu Gothic', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* ヘッダー */
+header {
+  background-color: #e198ad;
+  color: #fff;
+  padding: 1.5rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* セクション全体 */
+main section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* 見出し */
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid #e198ad;
+  padding-left: 0.8rem;
+}
+
+/* 制作物ボタン */
+.works-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #e1447e;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.works-button:hover {
+  background-color: #e05789;
+}
+
+/* スキルリスト */
+ul {
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* お問い合わせ */
+#contact a {
+  color: #00a7a8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eee;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start; 
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+   margin-top: 8px;
+}
+
+.profile-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.work-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px 0;
+  background: #fff;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+.work-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px auto;
+  background: #fff;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  max-width: 600px;
+}
+
+.work-card img {
+  width: 100%;
+  max-width: 400px; /* ★画像の最大幅を制限 */
+  height: auto;
+  display: block;
+  margin: 0 auto 12px; /* ★中央揃え + 下余白 */
+  border-radius: 4px;
+}
+
+.work-card h3 {
+  margin: 8px 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+.work-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 4px 0;
+  text-align: center;
+}
+
+.visit-link {
+  display: inline-block;
+  margin: 10px auto 0;
+  padding: 6px 12px;
+  background: #cfa1c9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.visit-link:hover {
+  background: #d38cc9;
+}
+
+.work-title {
+  text-align: center;
+}
+
+
+/* 横並び用のFlex設定 */
+.work-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* 各カードのサイズ調整（2列） */
+.work-card {
+  width: 45%;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+/* ホバーで浮き上がるアニメーション */
+.work-card:hover {
+  transform: translateY(-5px);
+}
+
+/* カード内の画像のスタイル */
+.work-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* カード内テキストの余白 */
+.work-content {
+  padding: 0.5rem 0;
+}
+
+/* レスポンシブ対応：スマホでは1列 */
+@media screen and (max-width: 768px) {
+  .work-card {
+    width: 100%;
+  }
+}
+
+
+.banner-link-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* ← 右寄せ */
+  padding: 1rem 2rem; /* 上下左右に余白 */
+}
+
+@media screen and (max-width: 768px) {
+  .banner-link-box {
+    justify-content: center; /* スマホでは中央に */
+  }
+}
+
+.button-align-card {
+  width: 45%; /* .work-card と同じ幅 */
+  margin-left: auto; /* 右に寄せる */
+  margin-top: 2rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.work-button-wrapper {
+  width: 45%;               /* カードと同じ幅 */
+  margin: 2rem auto 0 auto; /* 自然な中央〜やや右寄せ */
+  text-align: right;        /* ボタンだけ右に揃える */
+  padding-right: 1rem;      /* 右に余白つけて寄せすぎ回避 */
+  box-sizing: border-box;
+}
+
+/* モバイル対応：中央寄せ */
+@media screen and (max-width: 768px) {
+  .work-button-wrapper {
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+  }
+}
+
+.banner-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.banner-gallery img {
+  width: 300px; /* 好きなサイズに調整可 */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.banner-gallery img:hover {
+  transform: scale(1.03);
+}
